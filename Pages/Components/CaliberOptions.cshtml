@@ -1,0 +1,19 @@
+@using Pages.Components
+
+@model CaliberOptions
+
+<div>
+
+    <div class="dropdown">
+        <div tabindex="0" role="button" class="btn m-1">Click</div>
+        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+
+            @foreach (var caliber in @Model.Calibers)
+            {
+                <li>
+                    <a>@caliber</a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

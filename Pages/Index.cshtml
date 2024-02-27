@@ -1,0 +1,31 @@
+@page
+@model Index
+
+@{
+    ViewData["Title"] = null;
+    Layout = "Shared/_Layout";
+}
+
+
+<section>
+
+    <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">Add Tasks</h1>
+                <p class="py-6">Add your todos here and experience the magic of Hydro!</p>
+                <span class="text-tiny italic">(Hail Hydro!)</span>
+            </div>
+            <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <hydro name="Todos"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="grid grid-cols-2">
+    <hydro name="NameForm" params="@(new { FirstName = "Nick", LastName = "Preston", Calibers = new List<string> { ".22 LR" } })"></hydro>
+    
+    <hydro name="CaliberOptions" ></hydro>
+
+</section>
